@@ -16,7 +16,7 @@ Auto Scaling, ALB, Aurora MySQL 등을 통해 확장성과 가용성을 갖춘 �
   - 보안 그룹 (ALB / EC2 / RDS 분리)
 - **컴퓨팅**
   - Auto Scaling Group (EC2 * 2, Private Subnet)
-  - User Data Script → Apache + PHP + DB 연동
+  - AMI → Apache + PHP + DB 연동
 - **로드 밸런싱**
   - Application Load Balancer(ALB) + Target Group + Listener
 - **데이터베이스**
@@ -27,11 +27,9 @@ Auto Scaling, ALB, Aurora MySQL 등을 통해 확장성과 가용성을 갖춘 �
 ## 📂 폴더 구조
 ```plaintext
 WEB-3tier-Structure/
-├── VPC.tf
-├── instances.tf
-├── userdata.sh
-├── ELB.tf
-├── RDS.tf
+├── main.tf
+├── outputs.tf
+├── variables.tf
 └── terraform.tf
 ```
 
